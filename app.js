@@ -1,8 +1,9 @@
 const routes = {
-    '/': { templateId: 'login' },
-    '/login': { templateId: 'login' },
-    '/dashboard': { templateId: 'dashboard' },
-    '/404': { templateId: 'notfound' },
+    '/': { templateId: 'login' , title : 'Bank App - Login'},
+    '/login': { templateId: 'login' , title : 'Bank App - Login'},
+    '/dashboard': { templateId: 'dashboard' , title : 'Bank App - Dashboard'},
+    '/404': { templateId: 'notfound' , title : 'Bank App - Not Found'},
+
 };
 
 function renderRoute(templateId) {
@@ -40,3 +41,4 @@ function onLinkClick(event) {
 
 window.onpopstate = () => updateRoute();
 updateRoute();
+
