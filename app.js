@@ -19,11 +19,17 @@ function renderRoute(templateId) {
     const view = template.content.cloneNode(true);
     app.innerHTML = '';
     app.appendChild(view);
+    
+    if(templateId === 'dashboard') {
+        console.log('Dashboard is shown');
+    }
 }
 
 function updateRoute() {
     const path = window.location.pathname;
     const route = routes[path] || routes['/404'];
+    const title = route.title || 'Bank App';
+    document.title = title;
     renderRoute(route.templateId);
 }
 
